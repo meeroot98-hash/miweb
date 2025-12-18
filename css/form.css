@@ -1,0 +1,29 @@
+body{
+
+    background: lightblue;
+}
+.login{
+    padding-top: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#fondo img{
+
+    border-radius: 20px;
+    display: block;
+    width: 500px;
+    height: 500px;
+    
+}
+#cajaFormulario{
+
+    background: royalblue;
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+}
+
