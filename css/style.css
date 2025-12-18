@@ -54,17 +54,21 @@ body{
     display: none;
     position: absolute;
     width: 150px;
+    
     background: royalblue;
     top: 30px;
     z-index: 1000;
     
 }
+.submenu.largo{
+
+    width: 180px;
+
+    
+}
 .submenu li{
     color: white;
     list-style: none;
-    text-align: left;
-
-
 }
 /*seccion de main y anuncios*/
 .main{
