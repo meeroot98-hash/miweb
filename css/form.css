@@ -1,29 +1,73 @@
 body{
 
-    background: lightblue;
-}
-.login{
-    padding-top: 43px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-
-}
-
-#fondo img{
-
-    border-radius: 20px;
-    display: block;
-    width: 500px;
-    height: 500px;
+    background: rgb(2, 113, 121);
+    
     
 }
-#cajaFormulario{
-
-    background: royalblue;
+.Formulario{
+    
+    background: rgb(9, 29, 90);
     width: 320px;
     height: 500px;
     border-radius: 20px;
+    color: white;
+    
 }
+.Formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    
+}
+
+#nombreingreso{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+#email{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.Formulario input{
+    text-align: center;
+    border: none;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    
+}
+.Formulario button{
+
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background: none;
+    color: white;
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+
+
+}
+.Formulario button:hover{
+    color:  rgb(9, 29, 90);;
+    background: white;;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+
 
