@@ -2,13 +2,14 @@ body{
 
     display: flex;
     justify-content: center;
-    background: rgb(2, 113, 121);
+  
+    background:royalblue;
     
     
 }
 .Formulario{
     
-    background: rgb(9, 29, 90);
+    background: rgb(18, 41, 112);;
     width: 320px;
     height: 500px;
     border-radius: 20px;
@@ -66,8 +67,6 @@ body{
     cursor: pointer;
     transition: 0.3s;
 }
-
-
 
 
 
