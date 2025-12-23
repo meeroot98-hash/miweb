@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.menu{
+
+    background: rgb(4, 6, 146);
+    width: 300px;
+    height: 100%;
+    
+}
+.menu{
+    align-items: center;
+    justify-content: center;
+    
+}
+.menu li{
+    
+    background: rgb(100, 51, 51);
+    list-style: none;
+   
+}
+.menu a{
+   
+    background: white;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+   
+    
+}
+#barra{
+
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#barra a{
+    width: 150px;
+    border-radius: 8px;
+    
+    font-size: 20px;
+}
+

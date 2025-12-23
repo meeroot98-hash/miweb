@@ -1,49 +1,20 @@
-const formulario = document.querySelector('.Formulario');
-const inputNombre = document.getElementById('nombre');
-const inputCorreo = document.getElementById('correo');
-const contenedor = document.getElementById('contenedor');
+const formularioLogin = document.querySelector('.Formulario');
 
-let listaAlumnos = JSON.parse(localStorage.getItem('alumnosDB')) || [];
-listaAlumnos.forEach(alumno => agregarTarjeta(alumno));
+formularioLogin.addEventListener('submit',function(evento){
+    evento.preventDefault();
+    const user = document.getElementById('user').value;
+    const pass = document.getElementById('contraseña').value;
 
-formulario.addEventListener('submit',function(evento){
-
-evento.preventDefault();
-
-
-
-const alumno ={
-
-  nombre : inputNombre.value,
-  correo : inputCorreo.value,
+    // Validación simple (luego esto lo hará Java con una base de datos)
+    if (user === "admin" && pass === "1234") {
+        localStorage.setItem('estaLogueado', 'true'); // Guardamos la sesión
+        window.location.href = "admin.html"; // Redirigimos
+    } else {
+        alert("Credenciales incorrectas");
+    }
+});
 
 
-
-};
-agregarTarjeta(alumno);
-
-listaAlumnos.push(alumno);
-
-localStorage.setItem('alumnosDB', JSON.stringify(listaAlumnos));
-console.table(listaAlumnos);
-formulario.reset();
-
-})
-
-function agregarTarjeta (alumno){
-
-  const tarjeta = document.createElement('div');
-  tarjeta.className = 'tarjetaAlumno';
-
-  tarjeta.innerHTML = `
-        <h3>${alumno.nombre}</h3>
-        <p>${alumno.correo}</p>
-        `;
-
-        contenedor.appendChild(tarjeta);
-
-
-}
 
 
 
