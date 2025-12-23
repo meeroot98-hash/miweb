@@ -1,36 +1,49 @@
 const formulario = document.querySelector('.Formulario');
 const inputNombre = document.getElementById('nombre');
-const inputEmail = document.getElementById('correo');
+const inputCorreo = document.getElementById('correo');
+const contenedor = document.getElementById('contenedor');
+
+let listaAlumnos = JSON.parse(localStorage.getItem('alumnosDB')) || [];
+listaAlumnos.forEach(alumno => agregarTarjeta(alumno));
+
+formulario.addEventListener('submit',function(evento){
+
+evento.preventDefault();
 
 
 
-
-formulario.addEventListener('submit', function(evento){
-
-  evento.preventDefault();
-
-if(inputNombre.value === ""){
-  inputNombre.style.border="3px solid red";
-  alert("este campo es obligatorio");
-  return;
-
-
-}else{
-
-  inputNombre.style.border="3px solid green";
-
-}
-
-const nuevoAlumno =  {
+const alumno ={
 
   nombre : inputNombre.value,
-  email : inputEmail.value,
-  id : Date.now()
-
-  }
-  console.log(nuevoAlumno);
+  correo : inputCorreo.value,
 
 
+
+};
+agregarTarjeta(alumno);
+
+listaAlumnos.push(alumno);
+
+localStorage.setItem('alumnosDB', JSON.stringify(listaAlumnos));
+console.table(listaAlumnos);
+formulario.reset();
+
+})
+
+function agregarTarjeta (alumno){
+
+  const tarjeta = document.createElement('div');
+  tarjeta.className = 'tarjetaAlumno';
+
+  tarjeta.innerHTML = `
+        <h3>${alumno.nombre}</h3>
+        <p>${alumno.correo}</p>
+        `;
+
+        contenedor.appendChild(tarjeta);
+
+
+}
 
 
 
