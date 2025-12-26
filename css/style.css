@@ -23,15 +23,7 @@ body {
   height: 100%;
   padding: 0px;
 }
-.solo-movil {
-    display: none !important;
- }
- .solo-movil a {
-  display: none !important;
- }
- .solo-movil li{
-  display: none !important;
- }
+
 .barra li {
   display: flex;
   align-items: center;
