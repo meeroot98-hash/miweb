@@ -23,7 +23,21 @@ listaAlumno.push(nuevoAlumno);
 //guardando alumno en el localstorage
 localStorage.setItem('alumnosGuardados', JSON.stringify(listaAlumno));
 /////////////////////////////////////
+if (nuevoAlumno.usuario !== "" && nuevoAlumno.correo !== "") {
+        
+        alert("¡Registro exitoso! Redirigiendo...");
+
+        // 3. REDIRECCIÓN: Así se cambia de página en JavaScript
+        window.location.href = "alumnos.html"; 
+
+    } else {
+        alert("Por favor, llena todos los campos.");
+    }
+
+    formulario.reset();
+});
+
 console.table(listaAlumno);
 formulario.reset();
 
-});
+

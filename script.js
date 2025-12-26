@@ -1,16 +1,24 @@
-const formularioLogin = document.querySelector('.Formulario');
-
-formularioLogin.addEventListener('submit',function(evento){
+const formulario = document.querySelector('.Formulario');
+formulario.addEventListener('submit', function(evento) {
     evento.preventDefault();
     const user = document.getElementById('user').value;
-    const pass = document.getElementById('contraseña').value;
+    const pass = document.getElementById('password').value;
 
-    // Validación simple (luego esto lo hará Java con una base de datos)
-    if (user === "admin" && pass === "1234") {
-        localStorage.setItem('estaLogueado', 'true'); // Guardamos la sesión
-        window.location.href = "admin.html"; // Redirigimos
+    // 1. Traemos la lista de alumnos que guardamos en el Registro
+    const listaAlumnos = JSON.parse(localStorage.getItem('alumnosGuardados')) || [];
+
+    // 2. BUSCAMOS si existe un alumno que coincida con lo que el usuario escribió
+    const alumnoEncontrado = listaAlumnos.find(alumno => 
+        alumno.usuario === user && alumno.passWord === pass
+    );
+
+    // 3. VALIDACIÓN
+    if (alumnoEncontrado) {
+        localStorage.setItem('estaLogueado', 'true');
+        localStorage.setItem('usuarioActual', user); // Guardamos quién entró
+        window.location.href = "alumnos.html";
     } else {
-        alert("Credenciales incorrectas");
+        alert("Usuario o contraseña no encontrados. ¿Ya te registraste?");
     }
 });
 
