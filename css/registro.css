@@ -5,7 +5,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: royalblue;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
 }
 
 #contenedor{
@@ -15,11 +16,11 @@ body{
     justify-content: center;
     
     
-    background: rgb(18, 41, 112);;
+    background: rgb(18, 41, 112);
     width: 450px;
     height: 500px;
     border-radius: 15px;
-    border: 2px solid white;
+    
 }
 .registro{
     color: white;
@@ -50,16 +51,19 @@ body{
 }
 
 #registrar{
-    background: whitesmoke;
+   background: rgb(18, 41, 112);
+   color: white;
     height: 40px;
     width: 150px;
-    border: 2px solid royalblue;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
 }
 #registrar:hover{
 
-    background: royalblue;
-    color: white;
+    background: white;
+ 
+
+    color:rgb(18, 41, 112);
     border: 2px solid white;
     transition: 0.3s;
     cursor: pointer;

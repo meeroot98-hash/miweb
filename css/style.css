@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  background: royalblue;
+  
 }
 /*trabajando la barra de navegacion*/
 
@@ -37,7 +37,7 @@ body {
 }
 .barra li a:hover {
   background: white;
-  color: royalblue;
+  color:rgb(18, 41, 112);
   transition: 0.4s;
 }
 /*Aqui empiezan los submenus*/
