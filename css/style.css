@@ -5,19 +5,24 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
-  background:gray;
+  gap: 100px;
+  background: url("../imagenes/logo.png");
+  background-size: 60px;
+  background-attachment: fixed;
 }
 /*trabajando la barra de navegacion*/
 
-
 .header {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
+
   background: rgb(18, 41, 112);
   width: 100%;
-  height: 60px;
+  height: 90px;
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.5);
 }
 .barra {
@@ -28,7 +33,6 @@ body {
   gap: 40px;
   height: 100%;
   padding: 0px;
-  
 }
 
 .barra li {
@@ -44,7 +48,7 @@ body {
 }
 .barra li a:hover {
   background: white;
-  color:rgb(18, 41, 112);
+  color: rgb(18, 41, 112);
   transition: 0.4s;
 }
 /*Aqui empiezan los submenus*/
@@ -90,58 +94,57 @@ body {
 
 /*trabajando el muro escolar//////////////////////////////////////////////////////*/
 
-.muro{
+.muro {
+  
   margin: 0;
   padding: 0;
+  background: white;
+  height: 550px;
+  width: 750px;
 
-height: 550px;
-width: 900px;
+  border-radius: 15px;
 
-border-radius: 15px;
-background: white;
-display: flex;
-justify-content: space-between;
+  display: flex;
 
-align-items: center;
+  justify-content: space-between;
 
+  align-items: center;
 }
-#botonAtras{
+#botonAtras {
   padding: 0px;
   margin: 0px;
   width: 45px;
   height: 45px;
-  background:  rgb(18, 41, 112);
+  background: rgb(18, 41, 112);
   color: white;
   font-size: 30px;
   cursor: pointer;
   border-style: none;
-  border-radius:5px;
-  
+  border-radius: 5px;
 }
 
-#carruselIma{
-    width: 600px;  /* Ancho de la imagen visible */
-    height: 400px; /* Alto de la imagen */
-    overflow: hidden; /* Esconde las imágenes que no están activas */
-    display: flex;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    background: grey;
+#carruselIma {
+  width: 600px; /* Ancho de la imagen visible */
+  height: 400px; /* Alto de la imagen */
+  overflow: hidden; /* Esconde las imágenes que no están activas */
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: grey;
 }
-#carruselIma img{
-
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Evita que las fotos se deformen */
-    flex-shrink: 0;   /* Evita que las imágenes se colapsen */
-    transition: transform 0.5s ease-in-out; /* El efecto de deslizamiento */
+#carruselIma img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Evita que las fotos se deformen */
+  flex-shrink: 0; /* Evita que las imágenes se colapsen */
+  transition: transform 0.5s ease-in-out; /* El efecto de deslizamiento */
 }
-#botonAdelante{
+#botonAdelante {
   padding: 0px;
   margin: 0px;
   width: 45px;
   height: 45px;
-  background:  rgb(18, 41, 112);
+  background: rgb(18, 41, 112);
   color: white;
   font-size: 30px;
   cursor: pointer;
@@ -150,21 +153,44 @@ align-items: center;
 }
 
 /*trabajando la seccion de noticias */
-.noticias{
+.noticias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  width: 650px;
+  gap: 25px;
+  width: 100%;
   height: 450px;
-  
+
   border-radius: 10px;
   background: white;
-  
+}
+.articulo {
+  border-radius: 10px;
+  width: 45%;
+  height: 85%;
+  background: grey;
+}
+.articulo img {
+  width: 100%;
+  height: 100%;
+}
+.promocion {
+  border-radius: 10px;
+  width: 45%;
+  height: 85%;
+  background: gray;
+}
+.promocion img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
 }
 
 /*trabajando el pie de pagina */
-.piePagina{
-
+.piePagina {
   width: 100%;
-  height: 120px;
+  height: 220px;
   background: black;
   color: white;
   text-align: center;
