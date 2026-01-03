@@ -5,6 +5,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  
   gap: 100px;
   background: url("../imagenes/logo.png");
   background-size: 60px;
@@ -19,11 +20,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 40px;
 
+  justify-content: space-evenly;
   background: rgb(18, 41, 112);
   width: 100%;
   height: 90px;
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.5);
+}
+#buscar {
+
+
+  text-decoration: none;
+  border-style: none;
+  height: 30px;
+  width: 250px;
+}
+#barraBuscar{
+
+  color: white;
+ 
+
 }
 .barra {
   display: flex;
@@ -189,9 +206,20 @@ body {
 
 /*trabajando el pie de pagina */
 .piePagina {
+  display: flex;
+  align-items: center;
+  
+  justify-content:space-evenly;
   width: 100%;
-  height: 220px;
+  height: 420px;
   background: black;
   color: white;
   text-align: center;
+
+}
+.piePagina img{
+
+  width: 60%;
+  height: 50%;
+  border-radius: 15px;
 }
